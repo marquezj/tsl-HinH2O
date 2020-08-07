@@ -63,11 +63,11 @@ def middle_text(temp, fit_params):
                               cubic(temp2, fit_params[i+12,:]))
     rho[0] = 0.0
     rho[1] = (E[1]/E[2])**2.0*rho[2]
-    s = "{:.2f}".format(temp)+" /\n"+
-           "{:.4e}".format(E[1])+" "+"{:d}".format(len(E))+" /\n"+
-           n_columns(rho) +
-           "{:.4e}".format(cubic(temp2, fit_params[18,:]))+" "+
-           "{:.4e}".format(cubic(temp2, fit_params[19,:]))+" "+
+    s = "{:.2f}".format(temp)+" /\n"+\
+           "{:.4e}".format(E[1])+" "+"{:d}".format(len(E))+" /\n"+\
+           n_columns(rho) +\
+           "{:.4e}".format(cubic(temp2, fit_params[18,:]))+" "+\
+           "{:.4e}".format(cubic(temp2, fit_params[19,:]))+" "+\
            "{:.4e}".format(0.530-cubic(temp2, fit_params[18,:]))+" /\n"
     return s
 
